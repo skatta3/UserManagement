@@ -3,7 +3,7 @@ pipeline{
     stages{
        stage('GetCode'){
             steps{
-                git branch: 'Release', url: 'https://github.com/spring-projects/spring-petclinic.git'
+                git branch: 'Release', url: 'https://github.com/skatta3/UserManagement.git'
             }
          }        
        stage('Build'){
