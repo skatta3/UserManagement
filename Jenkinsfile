@@ -1,9 +1,12 @@
 pipeline{
     agent any
+    tools {
+    maven 'Maven' 
+  }
     stages{
        stage('GetCode'){
             steps{
-                git branch: 'main', url: 'https://github.com/spring-projects/spring-petclinic.git'
+                git branch: 'main', url: 'https://github.com/skatta3/UserManagement.git'
             }
          }        
        stage('Build'){
