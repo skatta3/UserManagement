@@ -19,7 +19,7 @@ import com.usermanagement.model.User;
  * table users in the database.
  * 
  */
-public class UserDAO 
+public class UserDAO {
 	
 	private static final String INSERT_USERS_SQL = "INSERT INTO users" + "  (name, email, country) VALUES "
 			+ " (?, ?, ?);";
