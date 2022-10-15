@@ -1,8 +1,5 @@
 pipeline{
     agent any
-    tools {
-    maven 'Maven' 
-  }
     stages{
        stage('GetCode'){
             steps{
@@ -11,7 +8,7 @@ pipeline{
          }        
        stage('Build'){
             steps{
-                bat 'mvn clean package'
+                sh 'mvn clean package'
             }
          }
        
