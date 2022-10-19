@@ -8,7 +8,7 @@ pipeline{
          }        
        stage('Build'){
              when {
-                branch "main"
+                branch "dev"
             }
             steps{
                 sh 'mvn clean package'
