@@ -1,6 +1,5 @@
 package com.usermanagement.dao;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.Connection;
@@ -10,7 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
 import com.usermanagement.model.User;
 
@@ -33,29 +31,13 @@ public class UserDAO {
 	}
 
 	protected Connection getConnection() {
-		Properties props = new Properties();
-		FileInputStream fis = null;
 		Connection connection = null;
 		try {
             String fileSeparator = System.getProperty("file.separator");
-		    String SourceFile = "DBConnection.properties";
 
-			fis = new FileInputStream(SourceFile);
-			props.load(fis);
-			Class.forName("com.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection(props.getProperty("DB_URL"),
-					props.getProperty("DB_USERNAME"),
-					props.getProperty("DB_PASSWORD"));
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/emp?useSSL=false","root","admin");
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
