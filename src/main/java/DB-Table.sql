@@ -1,4 +1,4 @@
-Create Database emp;
+Create Database employee;
 
 CREATE TABLE users (
     id int NOT NULL AUTO_INCREMENT,

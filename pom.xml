@@ -42,4 +42,11 @@
       </plugin>
     </plugins>
   </build>
+  <distributionManagement>
+  <repository>
+    <id>myrepo-myrepo</id>
+    <name>myrepo-myrepo</name>
+    <url>https://myrepo-834139509645.d.codeartifact.us-east-2.amazonaws.com/maven/myrepo/</url>
+  </repository>
+</distributionManagement>
 </project>
