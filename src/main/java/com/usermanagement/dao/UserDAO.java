@@ -34,8 +34,8 @@ public class UserDAO {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 
-//			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/employee?useSSL=false","root","admin");
-			connection = DriverManager.getConnection("jdbc:mysql://database-1.cvwy3p14oe5a.us-east-1.rds.amazonaws.com:3306/emp?useSSL=false","admin","admin123");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/employee?useSSL=false","root","admin");
+//			connection = DriverManager.getConnection("jdbc:mysql://database-1.caguvxlcgvlw.us-east-1.rds.amazonaws.com:3306/employee?useSSL=false","admin","admin123");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
