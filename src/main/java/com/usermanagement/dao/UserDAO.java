@@ -49,7 +49,7 @@ public class UserDAO {
 	public void insertUser(User user) throws SQLException {
 		System.out.println(INSERT_USERS_SQL);
 		// try-with-resource statement will auto close the connection.
-	//	try (Connection connection = getConnection();
+		try (Connection connection = getConnection();
 				PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
 			preparedStatement.setString(1, user.getName());
 			preparedStatement.setString(2, user.getEmail());
