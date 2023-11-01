@@ -55,6 +55,8 @@ public class UserDAO {
 			preparedStatement.setString(2, user.getEmail());
 			preparedStatement.setString(3, user.getCountry());
 			System.out.println(preparedStatement);
+			System.out.println(preparedStatement);
+			System.out.println(preparedStatement);
 			preparedStatement.executeUpdate();
 		} catch (SQLException e) {
 			printSQLException(e);
