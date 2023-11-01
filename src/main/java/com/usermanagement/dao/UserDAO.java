@@ -31,7 +31,7 @@ public class UserDAO {
 
 	protected Connection getConnection() {
 		Connection connection = null;
-		try {
+//		try {
 			Class.forName("com.mysql.jdbc.Driver");
 
 			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/employee?useSSL=false","root","admin");
