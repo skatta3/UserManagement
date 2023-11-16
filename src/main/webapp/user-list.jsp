@@ -10,7 +10,6 @@
 	crossorigin="anonymous">
 </head>
 <body>
-<%  int result= 24/0; %>
 	<header>
 		<nav class="navbar navbar-expand-md navbar-dark"
 			style="background-color: tomato">

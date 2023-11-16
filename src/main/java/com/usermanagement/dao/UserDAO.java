@@ -1,6 +1,5 @@
 package com.usermanagement.dao;
 
-import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -10,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.usermanagement.model.User;
+
+
 
 /**
  * AbstractDAO.java This DAO class provides CRUD database operations for the
@@ -31,7 +32,7 @@ public class UserDAO {
 
 	protected Connection getConnection() {
 		Connection connection = null;
-//		try {
+		try {
 			Class.forName("com.mysql.jdbc.Driver");
 
 			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/employee?useSSL=false","root","admin");
@@ -80,6 +81,7 @@ public class UserDAO {
 				String email = rs.getString("email");
 				String country = rs.getString("country");
 				user = new User(id, name, email, country);
+				System.out.println(name);
 			}
 		} catch (SQLException e) {
 			printSQLException(e);
@@ -108,6 +110,7 @@ public class UserDAO {
 				String email = rs.getString("email");
 				String country = rs.getString("country");
 				users.add(new User(id, name, email, country));
+				System.out.println(email);		
 			}
 		} catch (SQLException e) {
 			printSQLException(e);
